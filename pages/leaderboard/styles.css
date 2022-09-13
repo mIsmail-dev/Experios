@@ -1,0 +1,278 @@
+/* Import the fonts used */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Basic Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom  properties */
+:root {
+    --white-color: #fff;
+}
+
+/* Global Styles */
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    background: url('../../images/leaderboard-cover.png') no-repeat center center fixed;
+    background-blend-mode: darken;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styles - nav */
+
+nav {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    background-color: rgba(17, 52, 70, .53);
+    border: 0.1rem solid rgba(53, 81, 93, 1);
+    border-radius: 2.9rem;
+    margin: 1rem;
+    padding: 0.5rem 2rem 0.5rem 2rem; 
+    font-size: 1.6rem;
+}
+
+.nav-item-img {
+    width: 1.9rem;
+    height: 1.2rem;
+    margin-right: .7rem;
+}
+
+/* Leaderboard Section */
+
+.leader-board-card {
+    background-color: rgba(17, 52, 70, .53);
+    /* filter: blur(50); */
+    /* filter: brightness(50%); */
+    border: 0.1rem solid rgba(53, 81, 93, 1);   
+    border-radius: 1rem;
+    /* margin: 5.2rem 37.5rem 0rem 37.5rem; */
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 5.2rem;
+    margin-bottom: 5.2rem;
+    /* width: 117rem; */
+    
+}
+
+.title-text {
+    margin: 3.7rem 0rem 3.7rem 10.4rem; /* top right bottom left */
+    font-size: 1.6rem;
+}
+
+.leaderboard {
+    margin: 0rem 11.1rem 5rem 10.3rem; /* top right bottom left */
+    overflow-x: auto;   
+}
+
+.leaderboard-table {
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(10, 24, 33, 1);
+    height: 3.5rem;
+}
+
+tr {
+    height: 3.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(14, 38, 52, 1);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(45, 73, 85, 1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 3rem;
+    height: 2rem;
+    width: 26.6rem;
+    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;
+}
+
+.btn-return {
+    background: linear-gradient(#F30806, #7B1E1D);
+    margin-bottom: 4.2rem;
+}
+
+/* Media Queries */
+
+/* For desktops: 1025px to 1200px */
+@media screen and (max-width: 1200px) {
+    .leader-board-card {
+        width: 75%;
+    }
+}
+
+/* For laptops: 769px to 1024px */
+@media screen and (max-width: 1024px) {
+    .leader-board-card {
+        width: 85%;
+    }
+}
+
+/* For less than 900 */
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 9px;
+    }
+
+    .leader-board-card {
+        margin-top: 8.2rem;
+        margin-bottom: 5.2rem;
+        width: 75%;
+    }
+}
+
+/* For Mobile: less than 700px */
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 8.5px;
+    }
+
+    .logo {
+        width: 75%;
+    }
+
+
+    .leader-board-card {
+        margin-top: 12.2rem;
+        margin-bottom: 5.2rem;
+        width: 75%;
+    }
+
+    .leaderboard {
+        margin: 0rem 6.1rem 5rem 6.1rem; /* top right bottom left */
+        overflow-x: auto;   
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    .leader-board-card {
+        margin-top: 15.2rem;
+        margin-bottom: 5.2rem;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 7px;
+    }
+
+    .logo {
+        width: 65%;
+    }
+
+    .leader-board-card {
+        margin-top: 20.2rem;
+        margin-bottom: 5.2rem;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 6.5px;
+    }
+
+    /* Navbar */
+    .logo {
+        width: 45%;
+    }
+
+    .nav-item-img {
+        padding-top: .2rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: .1rem;
+    }
+
+    .nav-item {
+        margin: .2rem;
+        border-radius: 29px;
+        padding: 0.1rem 1rem 0.1rem 1rem;
+        font-size: 2.5rem;
+    }
+
+    .nav-item-title {
+        font-size: 50%;
+    }
+
+    /* LeaderBoard Section */
+    .leader-board-card {
+        margin-top: 15.2rem;
+        margin-bottom: 5.2rem;
+        width: 95%;
+    }
+
+    .leaderboard {
+        margin: 0rem 3.1rem 5rem 3.1rem; /* top right bottom left */
+        overflow-x: auto;   
+    }
+
+    .btn-return {
+        font-size: 1.5rem;
+    }
+
+    
+}
